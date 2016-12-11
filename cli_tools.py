@@ -15,6 +15,7 @@
 # <http://www.gnu.org/licenses/>.
 
 import argparse
+from collections import OrderedDict
 import inspect
 import sys
 
@@ -152,7 +153,7 @@ class ScriptAdaptor(object):
         self._processor = lambda x: None
         self._arguments = []
         self._groups = {}
-        self._subcommands = {}
+        self._subcommands = OrderedDict()
         self._entrypoints = set()
         self.do_subs = False
         self.subkwargs = {}
